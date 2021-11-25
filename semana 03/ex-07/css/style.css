@@ -1,0 +1,24 @@
+* {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    
+}
+
+select {
+    width: 200px;
+    height: 25px;
+}
+ /* input {
+    padding: 10px 250px 0 0;
+    width: 350;
+    height: 30px;
+} */
+
+
+/* button {
+    width: 100px;
+    height: 30px;
+} */

@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+p {
+    border: 0;
+    height: 32px;
+    font-size: 50px;
+    margin-top: 25px;
+    color: rgb(22, 59, 59);
+    font-family: lobster;
+}
+
+img {
+    text-align: center;
+}
