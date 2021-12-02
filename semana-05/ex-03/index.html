@@ -2,50 +2,47 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<script type="module" src="script.js/Endereco.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
 
-		<title>DEVinHOUSE</title>
-	</head>
-	<body>
-		<h1>SEMANA 05</h1>
-		<hr />
-		<h2>[M1S05] - Ex 3 - Crie uma classe Endereco</h2>
+    <title>DEVinHOUSE</title>
+  </head>
+  <body>
+    <h1>SEMANA 05</h1>
+    <hr />
+    <h2>[M1S05] - Ex 3 - Crie uma classe Endereco</h2>
 
-		<p id="descricao">
-			Crie uma nova classe para representar as informações de um endereço.
-			A classe Endereco possui os seguintes atributos: logradouro, numero,
-			cidade, estado, pais, cep. No constructor() desta classe, verifique
-			se todos os valores recebidos por parâmetro são do tipo 'string'
-			(utilize typeof). Caso algum não seja do tipo 'string', lance
-			(throw) uma exceção com a seguinte mensagem: "Endereço inválido!".
-			Ex.: throw 'Endereço inválido!' Dica:
-			https://www.w3schools.com/js/js_errors.asp
-		</p>
+    <p id="descricao">
+      Crie uma nova classe para representar as informações de um endereço. A
+      classe Endereco possui os seguintes atributos: logradouro, numero, cidade,
+      estado, pais, cep. No constructor() desta classe, verifique se todos os
+      valores recebidos por parâmetro são do tipo 'string' (utilize typeof).
+      Caso algum não seja do tipo 'string', lance (throw) uma exceção com a
+      seguinte mensagem: "Endereço inválido!". Ex.: throw 'Endereço inválido!'
+      Dica: https://www.w3schools.com/js/js_errors.asp
+    </p>
 
-		<main>
-			<section>
-				<div id="card">
-					<p id="paragrafo">Classe Endereço</p>
-					<form id="myForm">
-						<input
-							type="text"
-							placeholder="Logradouro"
-							name="logradouro"
-						/>
-						<input type="text" placeholder="Número" name="numero" />
-						<input type="text" placeholder="Cidade" name="cidade" />
-						<input type="text" placeholder="Estado" name="estado" />
-						<input type="text" placeholder="País" name="pais" />
-						<input type="text" placeholder="CEP" name="cep" />
-						<input type="submit" value="Salvar" />
-					</form>
-				</div>
-			</section>
-		</main>
-	</body>
+    <main>
+      <section>
+        <div id="card">
+          <p id="paragrafo">Classe Endereço</p>
+          <form id="myForm">
+            <input type="text" placeholder="Logradouro" name="logradouro" />
+            <input type="text" placeholder="Número" name="numero" />
+            <input type="text" placeholder="Cidade" name="cidade" />
+            <input type="text" placeholder="Estado" name="estado" />
+            <input type="text" placeholder="País" name="pais" />
+            <input type="text" placeholder="CEP" name="cep" />
+            <input type="submit" value="Salvar" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/Endereco.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
 </html>
