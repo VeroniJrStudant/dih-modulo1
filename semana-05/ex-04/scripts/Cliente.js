@@ -1,49 +1,47 @@
 export class Cliente {
-    _nome
-    get nome()
-    {
+
+    _nome;
+    get nome() {
         return this._nome;
     }
-    set nome()
-    {
-        return this._nome;
+    set nome (value) {
+        this._nome = value;
     }
-    _cpf
-    get cpf()
-    {
+    _cpf;
+    get cpf() {
         return this._cpf;
     }
-    set cpf()
-    {
-        return this._cpf;
+    set cpf (value) {
+        this._cpf = value;
     }
-    _endereco
-    get endereco()
-    {
-        return this._endereco;
+    _telefone;
+    get telefone() {
+        return this._telefone;
     }
-    set endereco()
-    {
-        return this._endereco;
-    }
-    _numeroDoCelular
-    get numeroDoCelular()
-    {
-        return this._numeroDoCelular;
-    }
-    set numeroDoCelular()
-    {
-        return this._numeroDoCelular;
+    set telefone (value) {
+        this._telefone = value;
     }
 
-    constructor(nome, cpf, endereco, numeroDoCelular)
-    {
+    
+    constructor (nome,cpf,telefone) {
+        
+        const adicionaCliente = [nome,cpf,telefone];
+        
+        try {
+            for (let i = 0; i < adicionaCliente.length-1; i++) {
+                
+                if (typeof (adicionaCliente[i]) !== "string") {
+                    throw new Error("Dados Inválidos")
+                };
+            }
 
+        } catch (e) {
+            alert("deu ruim!")
+        }
+        
         this._nome = nome;
         this._cpf = cpf;
-        this._endereco = endereco;
-        this._numeroDoCelular = numeroDoCelular;
-    }
+        this._telefone = telefone;
+        
+    };
 }
-
-module.exports = Cliente;

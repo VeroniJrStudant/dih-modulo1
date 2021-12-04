@@ -10,7 +10,7 @@ export class Endereco {
           throw new Error("Endereço inválido!");
       };
     } catch (e) {
-      alert(e.message);
+      alert(e.Error);
     }
 
     this._logradouro = logradouro;

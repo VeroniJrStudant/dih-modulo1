@@ -1,3 +1,5 @@
+import { Endereco } from './Endereco.js';
+
 const myForm = document.getElementById("myForm");
 myForm.addEventListener("submit", saveAdress);
 
