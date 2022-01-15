@@ -1,0 +1,66 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>DEVinHOUSE</title>
+	</head>
+	<body>
+		<h1>SEMANA 05</h1>
+		<hr />
+		<h2>[M1S05] - Ex 4 - Crie uma classe Endereco</h2>
+
+		<p id="descricao">
+			A nova classe Cliente possui os seguintes atributos: nome, cpf,
+			endereco, numeroDoCelular. O parâmetro endereco deve ser uma
+			instância da classe Endereco. No método constructor() da classe
+			cliente, verifique se o parâmetro endereco é uma instância da classe
+			Endereco (utilize instanceof), verifique também se os parâmetros
+			restantes são todos do tipo 'string'. Caso algum parâmetro estiver
+			incorreto, lance uma exceção (throw). Dica:
+			https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof
+		</p>
+
+		<main>
+			<section>
+				<div id="card">
+					<p id="paragrafo">Classe Endereço</p>
+					<form id="myForm">
+						<input type="text" placeholder="Nome" name="nome" />
+						<input type="text" placeholder="Cpf" name="cpf" />
+						<input
+							type="text"
+							placeholder="Telefone"
+							name="telefone"
+						/>
+						<hr />
+						<input type="text" placeholder="Conta" name="conta" />
+						<input type="text" placeholder="Saldo" name="saldo" />.
+						<hr />
+						<input
+							type="text"
+							placeholder="Logradouro"
+							name="logradouro"
+						/>
+						<input type="text" placeholder="Número" name="numero" />
+						<input type="text" placeholder="Cidade" name="cidade" />
+						<input type="text" placeholder="Estado" name="estado" />
+						<input type="text" placeholder="País" name="pais" />
+						<input type="text" placeholder="CEP" name="cep" />
+						<input type="submit" value="Salvar" />
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<script type="module" src="scripts/app.js"></script>
+		<script type="module" src="scripts/Endereco.js"></script>
+		<script type="module" src="scripts/Cliente.js"></script>
+		<script type="module" src="scripts/Conta.js"></script>
+	</body>
+</html>
