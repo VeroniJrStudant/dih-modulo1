@@ -13,16 +13,13 @@
 	<body>
 		<h1>SEMANA 05</h1>
 		<hr />
-		<h2>[M1S05] - Ex 6 - Verifique o atributo CEP</h2>
+		<h2>[M1S05] - Ex 7 - Valide o CPF em Cliente</h2>
 
 		<p id="descricao">
-			Crie um método que valida o formato do CEP informado na hora de
-			criar um novo objeto da classe Endereco. O novo método deve ser
-			utilizado dentro do constructor(). Caso não seja um CEP no formato
-			válido, cinco números, hífen e três números ('00000-000'), lance uma
-			exceção. Se quiser, pode experimentar utilizar uma expressão
-			regular. Dica:
-			https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+			Crie um método estático (static) na classe Cliente chamada
+			validaCPF() que retorna true caso o CPF inserido seja válido. Caso o
+			CPF seja inválido, retorna um erro e limpa o campo CPF. Dica:
+			https://www.devmedia.com.br/validar-cpf-com-javascript/23916
 		</p>
 
 		<main>
@@ -30,27 +27,8 @@
 				<div id="card">
 					<p id="paragrafo">Classe Endereço</p>
 					<form id="myForm">
-						<input type="text" placeholder="Nome" name="nome" />
 						<input type="text" placeholder="Cpf" name="cpf" />
-						<input
-							type="text"
-							placeholder="Telefone"
-							name="telefone"
-						/>
 						<hr />
-						<input type="text" placeholder="Conta" name="conta" />
-						<input type="text" placeholder="Saldo" name="saldo" />.
-						<hr />
-						<input
-							type="text"
-							placeholder="Logradouro"
-							name="logradouro"
-						/>
-						<input type="text" placeholder="Número" name="numero" />
-						<input type="text" placeholder="Cidade" name="cidade" />
-						<input type="text" placeholder="Estado" name="estado" />
-						<input type="text" placeholder="País" name="pais" />
-						<input type="text" placeholder="CEP" name="cep" />
 						<input type="submit" value="Salvar" />
 					</form>
 				</div>
@@ -58,8 +36,6 @@
 		</main>
 
 		<script type="module" src="scripts/app.js"></script>
-		<script type="module" src="scripts/Endereco.js"></script>
 		<script type="module" src="scripts/Cliente.js"></script>
-		<script type="module" src="scripts/Conta.js"></script>
 	</body>
 </html>
