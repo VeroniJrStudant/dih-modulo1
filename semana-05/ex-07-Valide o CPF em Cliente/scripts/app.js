@@ -14,9 +14,11 @@ function saveAdress(event) {
 
 	const newClient = new Cliente(cpf);
 
+	newClient.cpf = cpf;
+
 	const p = document.getElementById("paragrafo");
 
-	p.innerHTML = "<strong>Salvo com sucesso!</strong>";
-
 	myForm.innerHTML = `Cpf: ${newClient.cpf}`;
+
+	p.innerHTML = "<strong>Salvo com sucesso!</strong>";
 }
