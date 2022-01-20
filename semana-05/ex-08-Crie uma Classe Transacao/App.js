@@ -1,21 +1,21 @@
 /** @format */
 
-import { Conta } from "../dominio/Conta.js";
-import { Transacao } from "../dominio/Transacao.js";
-import { Cliente } from "../dominio/Cliente.js";
+import { Cliente } from "/Cliente.js";
+import { Conta } from "/Conta.js";
+import { Transacao } from "./Transacao.js";
 
-const clienteTeste = new Cliente("Fulano", "1111111111");
+const clienteFulano = new Cliente("Fulano");
 
-const contaTeste = new Conta("000000", 2000, clienteTeste);
+const contaFulano = new Conta("000000", 2000, clienteFulano);
 
-const transacaoTeste = new Transacao(contaTeste, 1000);
+const transacaoBeltrano = new Transacao(clienteFulano, 1000);
 
 //Depósito
-console.log(`Saldo antes do depósito de R$2000: ${contaTeste.saldo}`);
-transacaoTeste.deposito();
-console.log(`Saldo após depósito: ${contaTeste.saldo}`);
+console.log(`Saldo antes do depósito de R$2000: ${contaFulano.saldo}`);
+transacaoBeltrano.deposito();
+console.log(`Saldo após depósito: ${contaFulano.saldo}`);
 
 //Transfêrencia
-console.log(`Saldo antes do depósito de R$ 1000: ${contaTeste.saldo}`);
-transacaoTeste.transferencia();
-console.log(`Saldo após transferência: ${contaTeste.saldo}`);
+console.log(`Saldo antes do depósito de R$500: ${contaFulano.saldo}`);
+transacaoBeltrano.transferencia();
+console.log(`Saldo após transferência: ${contaFulano.saldo}`);

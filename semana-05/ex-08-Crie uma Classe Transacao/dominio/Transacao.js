@@ -1,6 +1,6 @@
 /** @format */
 
-import { Conta } from "./Conta.js";
+import { Conta } from "Conta.js";
 
 const TYPE = {
 	STR: "string",
@@ -8,10 +8,10 @@ const TYPE = {
 };
 
 export class Transacao {
-	conta;
-	valorDaTransacao;
+	_conta;
+	_valorDaTransacao;
 
-	constructor(conta, valorDaTransacao) {
+	constructor(conta, valorTransacao) {
 		if (!(conta instanceof Conta)) {
 			throw "Conta Inválida!";
 		}
@@ -20,8 +20,8 @@ export class Transacao {
 			throw "Valor inválido";
 		}
 
-		this.conta = conta;
-		this.valorDaTransacao = valorDaTransacao;
+		this._conta = conta;
+		this._valorDaTransacao = valorTransacao;
 	}
 
 	transferencia() {

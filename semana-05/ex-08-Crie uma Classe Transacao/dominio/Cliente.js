@@ -1,17 +1,16 @@
 /** @format */
-
 const TYPE = {
 	STR: "string",
 };
 
 export class Cliente {
-	_nome;
+	nome;
 
 	constructor(nome) {
-		if (typeof nome !== TYPE.STR) {
+		if (typeof this.nome !== TYPE.STR) {
 			throw "Parâmetro inválido!";
 		}
 
-		this._nome = nome;
+		this.nome = nome;
 	}
 }

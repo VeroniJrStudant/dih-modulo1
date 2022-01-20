@@ -7,9 +7,9 @@ const TYPE = {
 };
 
 export class Conta {
-	numeroDaConta;
-	saldo;
-	cliente;
+	_numeroDaConta;
+	_saldo;
+	_cliente;
 
 	constructor(numeroDaConta, saldo, cliente) {
 		if (
