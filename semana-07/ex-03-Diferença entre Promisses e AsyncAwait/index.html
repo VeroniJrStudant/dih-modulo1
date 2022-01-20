@@ -1,0 +1,54 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>DEVinHOUSE</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<h1>SEMANA 07</h1>
+		<hr />
+		<h2>[M1S07] - Ex 3 - Diferença entre Promise e Async/Await</h2>
+
+		<p>
+			Agora vamos tirar um pouco a mão do programa, essa é uma questão
+			mais teórica:
+			<hr />
+			<strong>
+				- Quando é recomendado utilizarmos Promises em nosso
+				programa?</strong
+			>
+			Promise é um objeto usado para processamento assíncrono. Um Promise(
+			de "promessa" ) representa um valor que pode estar disponível agora,
+			no futuro ou nunca*
+			<hr />
+			<strong>
+				- Qual é a principal diferença entre a
+				utilização de Promisses e Async / Await?**
+			</strong>
+			
+			Promise - realiza
+			processamentos e tratamentos de eventos ou ações assíncronas. Async
+			- podemos utilizar a palavra-chave await antes de qualquer expressão
+			que retorne uma promessa. Dessa forma, a execução da função externa
+			(a função async) será pausada até que a Promise seja resolvida.
+			Await - recebe uma Promise e a transforma em um valor de retorno (ou
+			lança uma exceção em caso de erro). Quando utilizamos await, o
+			JavaScript vai aguardar até que a Promise finalize. Se for
+			finalizada com sucesso (o termo utilizado é fulfilled), o valor
+			obtido é retornado. Se a Promise for rejeitada (o termo utilizado é
+			rejected), é retornado o erro lançado pela exceção
+		</p>
+
+		<hr />
+
+		<!-- <h2>Resultado do exercício tecle F12 ("console.log")</h2> -->
+	</body>
+	<script type="module" src="./App.js"></script>
+</html>
