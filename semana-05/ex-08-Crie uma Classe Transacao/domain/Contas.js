@@ -1,5 +1,4 @@
-/** @format */
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "./Clientes.js";
 
 const TYPE = {
 	STR: "string",
@@ -7,9 +6,9 @@ const TYPE = {
 };
 
 export class Conta {
-	_numeroDaConta;
-	_saldo;
-	_cliente;
+	numeroDaConta;
+	saldo;
+	cliente;
 
 	constructor(numeroDaConta, saldo, cliente) {
 		if (
@@ -20,8 +19,8 @@ export class Conta {
 			throw "Parametro Inválido!";
 		}
 
-		this._numeroDaConta = numeroDaConta;
-		this._saldo = saldo;
-		this._cliente = cliente;
+		this.numeroDaConta = numeroDaConta;
+		this.saldo = saldo;
+		this.cliente = cliente;
 	}
 }
