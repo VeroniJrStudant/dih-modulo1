@@ -10,31 +10,34 @@
 		<title>DEVinHOUSE</title>
 
 		<link rel="stylesheet" href="css/style.css" />
+		<script type="module" src="./App.js"></script>
 	</head>
 	<body>
 		<h1>SEMANA 07</h1>
 		<hr />
-		<h2>[M1S07] - Ex 4 - O que é função assíncrona</h2>
+		<h2>Ex 10 - Consumir API The Cat API com Async/Await</h2>
 
 		<p>
-			<strong
-				>Mais uma questão teórica: O que significa termos um programa
-				assíncrono?</strong
-			>
-			Quando uma função
-			São função ou tarefas que executam sem ordem
-			<hr>
-			<strong>Quando uma função for assíncrona, quando é recomendado utilizar
-				o Await?</strong
-			>
-			<br>
-			No caso do um e-mail, neste caso é sugerido usar Await para
-			finalizar a execução da Promisse.
+			Baseando-se na mesma consulta da The Cat API, do exercício 7
+			(M1S07), crie uma versão utilizando apenas uma função assíncrona,
+			ainda com “fetch”, porém desta vez fazendo uso de async e await.
+			Extra: Utilize os blocos try/catch para substituir “.then()” e
+			“.catch()”.
 		</p>
 
 		<hr />
 
+		<main>
+			<p class="campo-img">Consulte uma imagem de gato:</p>
+
+			<button id="botao">Buscar imagem</button>
+			<hr />
+
+			<div id="resp-tela">
+				<img id="imagem" />
+			</div>
+		</main>
+
 		<!-- <h2>Resultado do exercício tecle F12 ("console.log")</h2> -->
 	</body>
-	<script type="module" src="./App.js"></script>
 </html>

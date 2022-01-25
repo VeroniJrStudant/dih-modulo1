@@ -1,21 +1,25 @@
-/** @format */
+const buscarImagem = async () => {
+	//Esta buscando URL da imagem na API
+	const urlImagem = await consultaApi();
 
-import { Conta } from "../dominio/Conta.js";
-import { Transacao } from "../dominio/Transacao.js";
-import { Cliente } from "../dominio/Cliente.js";
+	//Atribuindo a URL à tag <img>
+	const img = document.getElementById("imagem");
+	img.setAttribute("src", urlImagem);
 
-const clienteTeste = new Cliente("Fulano", "1111111111");
+	//Adicionou classe para estilizar a tag <img>
+	imagem.classList.add("imagem");
+};
 
-const contaTeste = new Conta("000000", 2000, clienteTeste);
+const consultaApi = async () => {
+	try {
+		const consultaUrl = `https://api.thecatapi.com/v1/images/search`;
+		const response = await fetch(consultaUrl);
+		const converteUrl = await response.json();
+		const urlImagem = converteUrl[0].url;
 
-const transacaoTeste = new Transacao(contaTeste, 1000);
-
-//Depósito
-console.log(`Saldo antes do depósito de R$2000: ${contaTeste.saldo}`);
-transacaoTeste.deposito();
-console.log(`Saldo após depósito: ${contaTeste.saldo}`);
-
-//Transfêrencia
-console.log(`Saldo antes do depósito de R$ 1000: ${contaTeste.saldo}`);
-transacaoTeste.transferencia();
-console.log(`Saldo após transferência: ${contaTeste.saldo}`);
+		return urlImagem;
+	} catch (erro) {
+		alert("Erro!");
+	}
+};
+document.getElementById("botao").addEventListener("click", buscarImagem);

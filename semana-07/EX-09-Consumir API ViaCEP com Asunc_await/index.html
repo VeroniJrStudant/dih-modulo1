@@ -1,0 +1,50 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>DEVinHOUSE</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="img/favicons/favicon-16x16.png"
+			type="image/x-icon"
+		/>
+		<script src="App.js" type="module"></script>
+	</head>
+	<body>
+		<main>
+			<h1>SEMANA 07</h1>
+			<hr />
+			<h2>Ex 9 - Consumir API ViaCEP com Async/Await</h2>
+			<p>
+				<strong
+					>Baseando-se na mesma consulta da API ViaCEP, do exercício 6
+					(M1S07), crie uma versão utilizando apenas uma função
+					assíncrona, ainda com “fetch”, porém desta vez fazendo uso
+					de async e await. Extra: Utilize os blocos try/catch para
+					substituir “.then()” e “.catch()”.</strong
+				>
+			</p>
+			<hr />
+			<div>
+				<form class="buscaCep">
+					<label for="cep">Informe o CEP:</label>
+					<input
+						id="cep"
+						name="cep"
+						type="text"
+						placeholder="00000-000"
+					/>
+					<button id="btnCep">Verificar</button>
+				</form>
+				<div class="resultadoCep"></div>
+			</div>
+		</main>
+	</body>
+</html>
