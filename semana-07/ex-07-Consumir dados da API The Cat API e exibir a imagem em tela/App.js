@@ -1,21 +1,21 @@
-/** @format */
+const buscaImagem = async () => {
+    //busca URL da iamgem na API
+    const urlImagem = await consultaApi();
 
-import { Conta } from "../dominio/Conta.js";
-import { Transacao } from "../dominio/Transacao.js";
-import { Cliente } from "../dominio/Cliente.js";
+    //Atribiu a URL à tag <img>
+    const img = document.getElementById('imagem');
+    img.setAttribute('src', urlImagem);
 
-const clienteTeste = new Cliente("Fulano", "1111111111");
+    //Adiciona classe para esticlizar na tag <img>
+    imagem.classList.add('imagem')
+}
 
-const contaTeste = new Conta("000000", 2000, clienteTeste);
+const consultaApi = async () => {
+    return await fetch('https://api.thecatapi.com/v1/images/search')
+        .then(resp => resp.json())
+        .then(lista => lista[0].url)
+        .catch(erro => alert(erro))
+}
 
-const transacaoTeste = new Transacao(contaTeste, 1000);
-
-//Depósito
-console.log(`Saldo antes do depósito de R$2000: ${contaTeste.saldo}`);
-transacaoTeste.deposito();
-console.log(`Saldo após depósito: ${contaTeste.saldo}`);
-
-//Transfêrencia
-console.log(`Saldo antes do depósito de R$ 1000: ${contaTeste.saldo}`);
-transacaoTeste.transferencia();
-console.log(`Saldo após transferência: ${contaTeste.saldo}`);
+document.getElementById('botao')
+    .addEventListener('click',buscaImagem);

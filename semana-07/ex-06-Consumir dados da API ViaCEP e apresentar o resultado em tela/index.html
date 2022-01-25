@@ -10,31 +10,37 @@
 		<title>DEVinHOUSE</title>
 
 		<link rel="stylesheet" href="css/style.css" />
+	<script src="App.js" type="module"></script>
+
 	</head>
 	<body>
-		<h1>SEMANA 07</h1>
-		<hr />
-		<h2>[M1S07] - Ex 4 - O que é função assíncrona</h2>
+		<main>
+			<h1>SEMANA 07</h1>
+			<hr />
+			<h2>[Ex 6 - Consumir dados da API ViaCEP e apresentar o resultado em tela</h2>
+			<p>
+				<strong>Desenvolva uma função em Javascript para consultar CEP na API ViaCEP.
 
-		<p>
-			<strong
-				>Mais uma questão teórica: O que significa termos um programa
-				assíncrono?</strong
-			>
-			Quando uma função
-			São função ou tarefas que executam sem ordem
-			<hr>
-			<strong>Quando uma função for assíncrona, quando é recomendado utilizar
-				o Await?</strong
-			>
-			<br>
-			No caso do um e-mail, neste caso é sugerido usar Await para
-			finalizar a execução da Promisse.
-		</p>
+					O endpoint para essa consulta será “https://viacep.com.br/ws/01001000/json”, onde o valor “01001000” deverá ser substituído pelo CEP no qual você deseja consultar.
+					
+					Para a requisição, você pode utilizar “fetch”, com o encadeamento “then” e “catch” de promises.
+					
+					O resultado de cada consulta de CEP deverá ser apresentado em tela, utilizando o código HTML. Para isso, aplique todos os conceitos aprendidos sobre DOM e CSS.
+					
+					Para mais informações sobre a API, consulte: ViaCEP - Webservice CEP e IBGE gratuito</strong>
+			</p>
+			<hr />
+			<div>
+				<form class="buscaCep">
+					<label for="cep">Informe o CEP:</label>
+					<input id="cep" name="cep" type="text" placeholder="00000-000">
+					<button id="btnCep">Verificar</button>
+				</form>
+				<div class="resultadoCep">
 
-		<hr />
+				</div>
+			</div>
+		</main>
 
-		<!-- <h2>Resultado do exercício tecle F12 ("console.log")</h2> -->
 	</body>
-	<script type="module" src="./App.js"></script>
 </html>

@@ -1,21 +1,19 @@
-/** @format */
+const inputCep = document.getElementById("cep");
+const btnCep = document.getElementById("btnCep");
+const resultadoCep = document.querySelector(".resultadoCep");
 
-import { Conta } from "../dominio/Conta.js";
-import { Transacao } from "../dominio/Transacao.js";
-import { Cliente } from "../dominio/Cliente.js";
+const clicarBotao = (event) => {
+    event.preventDefault();
+    const cep = inputCep.value;
+    consultaCep(cep);
+}
 
-const clienteTeste = new Cliente("Fulano", "1111111111");
+const consultaCep = (cep) => {
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    .then(resp => resp.text())
+    .then(texto => resultadoCep.innerText = texto)
+    .catch(erro => alert('Digite um CEP válido'));
+}
 
-const contaTeste = new Conta("000000", 2000, clienteTeste);
+btnCep.addEventListener("click",clicarBotao);
 
-const transacaoTeste = new Transacao(contaTeste, 1000);
-
-//Depósito
-console.log(`Saldo antes do depósito de R$2000: ${contaTeste.saldo}`);
-transacaoTeste.deposito();
-console.log(`Saldo após depósito: ${contaTeste.saldo}`);
-
-//Transfêrencia
-console.log(`Saldo antes do depósito de R$ 1000: ${contaTeste.saldo}`);
-transacaoTeste.transferencia();
-console.log(`Saldo após transferência: ${contaTeste.saldo}`);
